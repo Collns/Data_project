@@ -59,7 +59,7 @@ const Hero = () => {
                             </p>
                             <button
                                 className="bg-red-600 rounded py-2 px-2 text-white"
-                                onClick={() => navigate("/login")} // Navigate to the login page
+                                onClick={() => navigate("/book")} // Navigate to the login page
                             >
                                 BOOK AN APPOINTMENT
                             </button>

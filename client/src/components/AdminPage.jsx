@@ -110,7 +110,13 @@ const AdminPage = () => {
 
     return (
         <div className="p-6 font-sans">
-            <h1 className="text-2xl font-bold mb-6">Admin - Manage Appointments</h1>
+            <div className="flex items-start lg:w-1/2 ">
+                <h1 className="text-6xl font-bold justify-center">
+                <span className="block text-black">SHAY'S </span>
+                <span className="block text-red-500">ADMIN</span>
+                </h1>
+            </div>
+            {/* <h1 className="text-2xl font-bold mb-6">Admin - Manage Appointments</h1> */}
 
             {/* Feedback message */}
             {message && (
@@ -125,7 +131,7 @@ const AdminPage = () => {
 
             {/* Line Chart */}
             {chartData ? (
-                <div className="bg-white shadow-md rounded-lg p-4 mb-6">
+                <div className="bg-white shadow-md rounded-lg p-4 pt-2 mb-6">
                     <h2 className="text-xl font-semibold mb-4">Stylist Booking Stats</h2>
                     <Line data={chartData} />
                 </div>
@@ -176,7 +182,7 @@ const AdminPage = () => {
             {/* Save Changes Button */}
             <button
                 onClick={saveChanges}
-                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-600"
             >
                 Save Changes
             </button>

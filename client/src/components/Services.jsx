@@ -40,7 +40,7 @@ const Services = () => {
             </div>
             <button
             className="bg-red-600 text-white w-[120px] h-[50px]"
-            onClick={() => navigate("/login")} // Navigate to the login page
+            onClick={() => navigate("/book")} // Navigate to the login page
         >
             BOOK NOW
         </button>
