@@ -42,9 +42,9 @@ module.exports = (sequelize, DataTypes) => {
 
     // Define associations if necessary
     Appointments.associate = (models) => {
-        Appointments.belongsTo(models.Customers, { foreignKey: "customer_id" }); // Assuming this relationship exists
-        Appointments.belongsTo(models.Stylists, { foreignKey: "stylist_id" }); // Assuming stylist table exists
-        Appointments.belongsTo(models.Services, { foreignKey: "service_id" }); // Assuming service table exists
+        Appointments.belongsTo(models.Customers, { foreignKey: "customer_id", as: "customer" });
+        Appointments.belongsTo(models.Stylists, { foreignKey: "stylist_id", as: "stylist" });
+        Appointments.belongsTo(models.Services, { foreignKey: "service_id", as: "service" });        
     };
 
     return Appointments;

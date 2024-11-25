@@ -1,5 +1,7 @@
 import { PiHairDryer } from "react-icons/pi";
+import { useNavigate } from "react-router-dom";
 const Services = () => {
+    const navigate = useNavigate();
   return (
     <div className='border-b  border-black pb-2'>
         <header className='relative h-1/4 bg-black text-white overflow-x-hidden'>
@@ -36,9 +38,12 @@ const Services = () => {
                 </div>
             
             </div>
-            <button className="bg-red-600 text-white w-[120px] h-[50px] ">
-                BOOK NOW
-                    </button>
+            <button
+            className="bg-red-600 text-white w-[120px] h-[50px]"
+            onClick={() => navigate("/login")} // Navigate to the login page
+        >
+            BOOK NOW
+        </button>
             </div>
                     {/* second line */}
             <div className='flex flex-wrap items-center justify-around gap-4 py-12'>

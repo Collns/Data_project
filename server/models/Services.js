@@ -16,6 +16,10 @@ module.exports = (sequelize, DataTypes) =>
                 price: {
                     type: DataTypes.DECIMAL(6, 2),
                     allowNull: false,
+                    get() {
+                        const rawValue = this.getDataValue('price');
+                        return parseFloat(rawValue); // Convert to number
+                    }
                 },
                 duration: {
                     type: DataTypes.INTEGER,

@@ -18,6 +18,10 @@ module.exports = (sequelize, DataTypes) => {
             rating: {
                 type: DataTypes.DECIMAL(3, 1), // Matches DECIMAL(3,1)
                 allowNull: true, // Matches `YES` for allowing NULL values
+                get() {
+                    const rawValue = this.getDataValue('rating');
+                    return rawValue !== null ? parseFloat(rawValue) : null; // Convert to number if not null
+                }
             },
         },
         {
